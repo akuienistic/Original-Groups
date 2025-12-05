@@ -90,10 +90,6 @@ export function Hero() {
                 <p className="text-xs text-muted-foreground">Starting from</p>
                 <p className="font-semibold text-lg">$299</p>
               </div>
-
-              <div className="absolute -top-4 -right-4 bg-gold text-accent-foreground p-3 rounded-xl shadow-lg animate-fade-in animation-delay-400">
-                <p className="text-xs font-semibold">New Arrival</p>
-              </div>
             </div>
           </div>
         </div>
