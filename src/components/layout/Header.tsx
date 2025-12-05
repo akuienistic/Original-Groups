@@ -1,27 +1,23 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Search, ShoppingBag, Menu, X, User } from 'lucide-react';
-import { useCartStore } from '@/lib/cart';
-import { cn } from '@/lib/utils';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from '@/components/ui/sheet';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Search, ShoppingBag, Menu, X, User, Home, ShoppingCart, Smartphone, Shirt, Sprout } from "lucide-react";
+import { useCartStore } from "@/lib/cart";
+import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/catalog', label: 'Shop' },
-  { href: '/catalog?category=phones', label: 'Phones' },
-  { href: '/catalog?category=fashion', label: 'Fashion' },
-  { href: '/catalog?category=perfumes', label: 'Perfumes' },
+  { href: "/", label: "Home", icon: Home },
+  { href: "/catalog", label: "Shop", icon: ShoppingCart },
+  { href: "/catalog?category=phones", label: "Phones", icon: Smartphone },
+  { href: "/catalog?category=fashion", label: "Fashion", icon: Shirt },
+  { href: "/catalog?category=perfumes", label: "Perfumes", icon: Sprout },
 ];
 
 export function Header() {
   const [isSearchOpen, setIsSearchOpen] = useState(false);
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const location = useLocation();
   const totalItems = useCartStore((state) => state.getTotalItems());
 
@@ -42,12 +38,17 @@ export function Header() {
                   <Link
                     key={link.href}
                     to={link.href}
-                    className="text-lg font-medium hover-gold"
+                    className="flex items-center gap-3 text-lg font-medium hover-gold"
                   >
+                    <link.icon className="h-5 w-5" />
                     {link.label}
                   </Link>
                 ))}
-                <Link to="/admin" className="text-lg font-medium hover-gold mt-4 pt-4 border-t border-border">
+                <Link
+                  to="/admin"
+                  className="flex items-center gap-3 text-lg font-medium hover-gold mt-4 pt-4 border-t border-border"
+                >
+                  <User className="h-5 w-5" />
                   Admin Panel
                 </Link>
               </nav>
@@ -99,18 +100,14 @@ export function Header() {
                     size="icon"
                     onClick={() => {
                       setIsSearchOpen(false);
-                      setSearchQuery('');
+                      setSearchQuery("");
                     }}
                   >
                     <X className="h-4 w-4" />
                   </Button>
                 </div>
               ) : (
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  onClick={() => setIsSearchOpen(true)}
-                >
+                <Button variant="ghost" size="icon" onClick={() => setIsSearchOpen(true)}>
                   <Search className="h-5 w-5" />
                 </Button>
               )}
