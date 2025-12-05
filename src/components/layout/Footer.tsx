@@ -106,6 +106,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="border-t border-primary-foreground/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-primary-foreground/50 text-sm">© 2025 Original Groups. All rights reserved.</p>
+          <p className="text-primary-foreground/50 text-sm">Designed and built by <a href="https://www.linkedin.com/in/simon-akuien-atem-710895290" className="hover:text-gold transition-colors">Simon Akuien</a></p>
           <div className="flex gap-6">
             <a href="#" className="text-primary-foreground/50 hover:text-gold transition-colors text-sm">
               Privacy Policy
