@@ -20,7 +20,7 @@ export function Hero() {
                 Premium Collection 2025
               </p>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
-                Original <span className="text-gold">Groups</span>
+                Original <span className="text-gold">Group</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground font-light animate-fade-in animation-delay-200">
                 Electronics & Luxury Fashion

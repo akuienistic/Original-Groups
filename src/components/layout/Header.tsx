@@ -33,32 +33,35 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-[300px]">
-              <nav className="flex flex-col gap-4 mt-8">
-                {navLinks.map((link) => (
+              <div className="mt-8">
+                <h2 className="text-xl font-bold mb-6">Original Group</h2>
+                <nav className="flex flex-col gap-4">
+                  {navLinks.map((link) => (
+                    <Link
+                      key={link.href}
+                      to={link.href}
+                      className="flex items-center gap-3 text-lg hover-gold"
+                    >
+                      <link.icon className="h-5 w-5" />
+                      {link.label}
+                    </Link>
+                  ))}
                   <Link
-                    key={link.href}
-                    to={link.href}
-                    className="flex items-center gap-3 text-lg font-medium hover-gold"
+                    to="/admin"
+                    className="flex items-center gap-3 text-lg hover-gold mt-4 pt-4 border-t border-border"
                   >
-                    <link.icon className="h-5 w-5" />
-                    {link.label}
+                    <User className="h-5 w-5" />
+                    Admin Panel
                   </Link>
-                ))}
-                <Link
-                  to="/admin"
-                  className="flex items-center gap-3 text-lg font-medium hover-gold mt-4 pt-4 border-t border-border"
-                >
-                  <User className="h-5 w-5" />
-                  Admin Panel
-                </Link>
-              </nav>
+                </nav>
+              </div>
             </SheetContent>
           </Sheet>
 
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <span className="font-display text-xl md:text-2xl font-semibold tracking-tight">
-              Original <span className="text-gold">Groups</span>
+              Original <span className="text-gold">Group</span>
             </span>
           </Link>
 
