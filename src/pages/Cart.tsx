@@ -1,11 +1,11 @@
-import { Link } from 'react-router-dom';
-import { Minus, Plus, Trash2, ShoppingBag, MessageCircle, ArrowRight } from 'lucide-react';
-import { Layout } from '@/components/layout/Layout';
-import { useCartStore } from '@/lib/cart';
-import { Button } from '@/components/ui/button';
-import { Separator } from '@/components/ui/separator';
+import { Link } from "react-router-dom";
+import { Minus, Plus, Trash2, ShoppingBag, MessageCircle, ArrowRight } from "lucide-react";
+import { Layout } from "@/components/layout/Layout";
+import { useCartStore } from "@/lib/cart";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
-const WHATSAPP_NUMBER = '901234567890';
+const WHATSAPP_NUMBER = "211922271119";
 
 const Cart = () => {
   const { items, updateQuantity, removeItem, clearCart, getTotalPrice, generateWhatsAppMessage } = useCartStore();
@@ -13,7 +13,7 @@ const Cart = () => {
 
   const handleWhatsAppCheckout = () => {
     const message = generateWhatsAppMessage();
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
   };
 
   if (items.length === 0) {
@@ -25,9 +25,7 @@ const Cart = () => {
               <ShoppingBag className="h-12 w-12 text-muted-foreground" />
             </div>
             <h1 className="font-display text-2xl font-bold mb-4">Your cart is empty</h1>
-            <p className="text-muted-foreground mb-8">
-              Looks like you haven't added any items to your cart yet.
-            </p>
+            <p className="text-muted-foreground mb-8">Looks like you haven't added any items to your cart yet.</p>
             <Button asChild className="bg-foreground text-background hover:bg-foreground/90">
               <Link to="/catalog">
                 Start Shopping
@@ -69,20 +67,14 @@ const Cart = () => {
                 <div className="flex-1 min-w-0">
                   <div className="flex justify-between gap-4">
                     <div>
-                      <p className="text-xs text-muted-foreground uppercase tracking-wider">
-                        {item.product.brand}
-                      </p>
+                      <p className="text-xs text-muted-foreground uppercase tracking-wider">{item.product.brand}</p>
                       <Link
                         to={`/product/${item.product.id}`}
                         className="font-medium hover:text-gold transition-colors line-clamp-2"
                       >
                         {item.product.name}
                       </Link>
-                      {item.size && (
-                        <p className="text-sm text-muted-foreground mt-1">
-                          Size: {item.size}
-                        </p>
-                      )}
+                      {item.size && <p className="text-sm text-muted-foreground mt-1">Size: {item.size}</p>}
                     </div>
                     <p className="font-semibold text-lg whitespace-nowrap">
                       ${(item.product.price * item.quantity).toLocaleString()}
@@ -127,11 +119,7 @@ const Cart = () => {
             ))}
 
             {/* Clear Cart */}
-            <Button
-              variant="outline"
-              className="w-full"
-              onClick={clearCart}
-            >
+            <Button variant="outline" className="w-full" onClick={clearCart}>
               Clear Cart
             </Button>
           </div>
@@ -148,12 +136,10 @@ const Cart = () => {
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-muted-foreground">Shipping</span>
-                  <span>{total >= 500 ? 'Free' : '$25'}</span>
+                  <span>{total >= 500 ? "Free" : "$25"}</span>
                 </div>
                 {total < 500 && (
-                  <p className="text-xs text-gold">
-                    Add ${(500 - total).toLocaleString()} more for free shipping
-                  </p>
+                  <p className="text-xs text-gold">Add ${(500 - total).toLocaleString()} more for free shipping</p>
                 )}
               </div>
 

@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
-import { MapPin, Phone, Mail, Instagram, Facebook, Twitter } from 'lucide-react';
+import { Link } from "react-router-dom";
+import { MapPin, Phone, Mail, Instagram, Facebook, Twitter } from "lucide-react";
 
 export function Footer() {
   return (
@@ -34,13 +34,22 @@ export function Footer() {
               <Link to="/catalog" className="text-primary-foreground/70 hover:text-gold transition-colors text-sm">
                 Shop All
               </Link>
-              <Link to="/catalog?category=phones" className="text-primary-foreground/70 hover:text-gold transition-colors text-sm">
+              <Link
+                to="/catalog?category=phones"
+                className="text-primary-foreground/70 hover:text-gold transition-colors text-sm"
+              >
                 Phones & Gadgets
               </Link>
-              <Link to="/catalog?category=fashion" className="text-primary-foreground/70 hover:text-gold transition-colors text-sm">
+              <Link
+                to="/catalog?category=fashion"
+                className="text-primary-foreground/70 hover:text-gold transition-colors text-sm"
+              >
                 Luxury Fashion
               </Link>
-              <Link to="/catalog?category=perfumes" className="text-primary-foreground/70 hover:text-gold transition-colors text-sm">
+              <Link
+                to="/catalog?category=perfumes"
+                className="text-primary-foreground/70 hover:text-gold transition-colors text-sm"
+              >
                 Perfumes
               </Link>
             </nav>
@@ -69,15 +78,24 @@ export function Footer() {
           <div className="space-y-4">
             <h4 className="font-semibold text-lg">Contact Us</h4>
             <div className="space-y-3">
-              <a href="#" className="flex items-center gap-3 text-primary-foreground/70 hover:text-gold transition-colors text-sm">
+              <a
+                href="#"
+                className="flex items-center gap-3 text-primary-foreground/70 hover:text-gold transition-colors text-sm"
+              >
                 <MapPin className="h-4 w-4 flex-shrink-0" />
-                <span>123 Luxury Avenue, Istanbul, Turkey</span>
+                <span>Kololo, Juba - South Sudan</span>
               </a>
-              <a href="tel:+901234567890" className="flex items-center gap-3 text-primary-foreground/70 hover:text-gold transition-colors text-sm">
+              <a
+                href="tel:+211922271119"
+                className="flex items-center gap-3 text-primary-foreground/70 hover:text-gold transition-colors text-sm"
+              >
                 <Phone className="h-4 w-4 flex-shrink-0" />
-                <span>+90 123 456 7890</span>
+                <span>+211 922 271 119</span>
               </a>
-              <a href="mailto:info@originalgroups.com" className="flex items-center gap-3 text-primary-foreground/70 hover:text-gold transition-colors text-sm">
+              <a
+                href="mailto:info@originalgroups.com"
+                className="flex items-center gap-3 text-primary-foreground/70 hover:text-gold transition-colors text-sm"
+              >
                 <Mail className="h-4 w-4 flex-shrink-0" />
                 <span>info@originalgroups.com</span>
               </a>
@@ -87,9 +105,7 @@ export function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-primary-foreground/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-primary-foreground/50 text-sm">
-            © 2024 Original Groups. All rights reserved.
-          </p>
+          <p className="text-primary-foreground/50 text-sm">© 2025 Original Groups. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="text-primary-foreground/50 hover:text-gold transition-colors text-sm">
               Privacy Policy

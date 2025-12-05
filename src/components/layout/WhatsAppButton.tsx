@@ -1,11 +1,11 @@
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle } from "lucide-react";
 
-const WHATSAPP_NUMBER = '901234567890';
+const WHATSAPP_NUMBER = "211922271119";
 
 export function WhatsAppButton() {
   const handleClick = () => {
-    const message = encodeURIComponent('Hello Original Groups! I have a question about your products.');
-    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, '_blank');
+    const message = encodeURIComponent("Hello Original Groups! I have a question about your products.");
+    window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${message}`, "_blank");
   };
 
   return (

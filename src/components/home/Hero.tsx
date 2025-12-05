@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
-import { ArrowRight, Shield, Truck, Award } from 'lucide-react';
-import { Button } from '@/components/ui/button';
+import { Link } from "react-router-dom";
+import { ArrowRight, Shield, Truck, Award } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
@@ -17,7 +17,7 @@ export function Hero() {
           <div className="space-y-8 text-center lg:text-left">
             <div className="space-y-4">
               <p className="text-gold font-medium tracking-widest uppercase text-sm animate-fade-in">
-                Premium Collection 2024
+                Premium Collection 2025
               </p>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight animate-fade-in animation-delay-100">
                 Original <span className="text-gold">Groups</span>
@@ -28,21 +28,28 @@ export function Hero() {
             </div>
 
             <p className="text-muted-foreground max-w-lg mx-auto lg:mx-0 animate-fade-in animation-delay-300">
-              Discover the finest collection of flagship smartphones, authentic Turkish luxury fashion, 
-              and exclusive fragrances. Every piece curated for the discerning customer.
+              Discover the finest collection of flagship smartphones, authentic Turkish luxury fashion, and exclusive
+              fragrances. Every piece curated for the discerning customer.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in animation-delay-400">
-              <Button asChild size="lg" className="bg-foreground text-background hover:bg-foreground/90 h-14 px-8 text-base">
+              <Button
+                asChild
+                size="lg"
+                className="bg-foreground text-background hover:bg-foreground/90 h-14 px-8 text-base"
+              >
                 <Link to="/catalog">
                   Explore Collection
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" size="lg" className="h-14 px-8 text-base border-gold text-gold hover:bg-gold hover:text-accent-foreground">
-                <Link to="/catalog?category=fashion">
-                  Turkish Fashion
-                </Link>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="h-14 px-8 text-base border-gold text-gold hover:bg-gold hover:text-accent-foreground"
+              >
+                <Link to="/catalog?category=fashion">Turkish Fashion</Link>
               </Button>
             </div>
 
@@ -68,7 +75,7 @@ export function Hero() {
             <div className="relative aspect-square max-w-lg mx-auto">
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gold/20 rounded-full blur-3xl scale-90" />
-              
+
               {/* Main Image Container */}
               <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
                 <img
